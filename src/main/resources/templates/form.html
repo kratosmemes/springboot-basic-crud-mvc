@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container mt-4">
+		<div class="col-sm-6">
+			<div class="card">	
+				<form th:action="@{/save}" th:object=${persona} method="POST">
+					<div class="card">
+						<div class="card-header">
+							<h1>Nuevo usuario</h1>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label>Id del usuario</label>
+								<input th:field="*{id}" class="form-control" type="text" placeholder="Ejemplo: 2">
+							</div>
+							<div class="form-group">
+								<label>Nombre</label>
+								<input th:field="*{nombre}"	class="form-control" type="text" placeholder="Ejemplo: John Doe">
+							</div>
+							<div class="form-group">
+								<label>Telefono</label>
+								<input th:field="*{telefono}"class="form-control" placeholder="Ejemplo: 444848488420">
+							</div>
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary" value="Guardar">Guardar</button>
+															</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
